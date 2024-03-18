@@ -16,6 +16,6 @@ on:
     tags-ignore:
       - "v[0-9]+.[0-9]+.*"
 jobs:
-  build-push-release:
-    uses: pchachicho/appstore-action-testing/test-remote.yml@master
+  build-push-release-remote:
+    uses: pchachicho/appstore-action-testing/.github/workflows/test-remote.yml@main
     secrets: inherit
