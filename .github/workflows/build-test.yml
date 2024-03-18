@@ -18,8 +18,8 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
-    steps:
-      - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v3.0.0
-        with:
-          event-type: my-event
+    # steps:
+    #   - name: Repository Dispatch
+    #     uses: peter-evans/repository-dispatch@v3.0.0
+    #     with:
+    #       event-type: my-event
