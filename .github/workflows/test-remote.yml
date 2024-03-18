@@ -17,5 +17,5 @@ on:
       - "v[0-9]+.[0-9]+.*"
 jobs:
   build-push-release:
-    uses: pchachicho/appstore-action-testing/test-remote.yml@main
+    uses: pchachicho/appstore-action-testing/test-remote.yml@master
     secrets: inherit
