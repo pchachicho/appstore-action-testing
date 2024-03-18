@@ -19,7 +19,9 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Repository Dispatch
+      - name: Repository Dispatch 
         uses: peter-evans/repository-dispatch@v3.0.0
         with:
+          token: ${{ secrets.PAT }}
+          repository: pchachicho/appstore-action-testing
           event-type: my-event
