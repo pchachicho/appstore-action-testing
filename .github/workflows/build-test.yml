@@ -1,20 +1,6 @@
 name: Build-test
-on:
-  push:
-    branches:
-      - master
-      - main
-    paths-ignore:
-      - README.md
-      - .old_cicd/*
-      - .github/*
-      - .github/workflows/*
-      - LICENSE
-      - .gitignore
-      - .dockerignore
-      - .githooks
-    tags-ignore:
-      - "v[0-9]+.[0-9]+.*"
+on: 
+ workflow_dispatch:
 jobs:
   build-test:
     runs-on: ubuntu-latest
