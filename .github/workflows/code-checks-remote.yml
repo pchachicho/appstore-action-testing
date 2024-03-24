@@ -1,10 +1,10 @@
 name: Code-Checks-Remote
 on:
     push:
-     branches-ignore:
-      - master
-      - main
-      - develop
+    #  branches-ignore:
+    #   - master
+    #   - main
+    #   - develop
      paths-ignore:
       - README.md
       - .old_cicd/*
@@ -20,6 +20,7 @@ on:
       - master
       - main 
      types: [ opened, synchronize ]
+         
 jobs:
 
   code-checks:
