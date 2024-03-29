@@ -26,15 +26,3 @@ jobs:
   code-checks:
     uses: pchachicho/renci-github-actions/.github/workflows/code-checks.yml@main
     secrets: inherit
-
-  build-push-dev-image:
-    uses: pchachicho/renci-github-actions/.github/workflows/build-push-dev-image.yml@main
-    secrets: inherit
-
-  build-push-release:
-    uses: pchachicho/renci-github-actions/.github/workflows/build-push-release.yml@main
-    secrets: inherit
-
-  trivy-pr-scan:
-    uses: pchachicho/renci-github-actions/.github/workflows/trivy-pr-scan.yml@main
-    secrets: inherit
