@@ -1,5 +1,6 @@
 name: trivy-pr-scan 
 on:
+
   pull_request:
     branches:
       - develop
@@ -15,7 +16,7 @@ on:
     - .gitignore
     - .dockerignore
     - .githooks
-
+ # test trivy later with push instead of pull request
 jobs:
     trivy-pr-scan:
         uses: pchachicho/renci-github-actions/.github/workflows/trivy-pr-scan.yml@main
