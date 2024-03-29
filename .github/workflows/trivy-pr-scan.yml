@@ -8,9 +8,9 @@ on:
     types: [ opened, synchronize ]
     paths-ignore:
     - README.md
-    - .old_cicd/*
-    - .github/*
-    - .github/workflows/*
+    # - .old_cicd/*
+    # - .github/*
+    # - .github/workflows/*
     - LICENSE
     - .gitignore
     - .dockerignore
