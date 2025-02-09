@@ -28,6 +28,6 @@ on:
 
 jobs:
   code-checks:
-    if: ${{ ! (github.event_name == 'push' && startsWith(github.ref, 'refs/pull/')) }}
+    if: github.event_name != 'push' || github.event_name == 'push' && github.event.pull_request == null
     uses: pchachicho/renci-github-actions/.github/workflows/code-checks.yml@main
     secrets: inherit
