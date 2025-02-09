@@ -21,6 +21,9 @@ on:
       - main 
      types: [ opened, synchronize ]
           
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
 #for test
 
 jobs:
