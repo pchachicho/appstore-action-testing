@@ -1,11 +1,11 @@
 name: Code-Checks-Remote
 on:
-    push:
+  push:
     #  branches-ignore:
     #   - master
     #   - main
     #   - develop
-     paths-ignore:
+    paths-ignore:
       - README.md
       - .old_cicd/*
       # - .github/*
@@ -14,14 +14,19 @@ on:
       - .gitignore
       - .dockerignore
       - .githooks
-    pull_request:
-     branches:
+  pull_request:
+    branches:
       - develop
       - master
-      - main 
-     types: [ opened, synchronize ]
-          
+      - main
+    types: [opened, synchronize]
+
+# concurrency:
+#   group: ${{ github.ref }}-${{ github.workflow }}
+#   cancel-in-progress: true
+#for test
 jobs:
   code-checks:
+    # if: (github.event_name != 'pull_request' && ! github.event.pull_request.head.repo.fork) 
     uses: pchachicho/renci-github-actions/.github/workflows/code-checks.yml@main
     secrets: inherit
